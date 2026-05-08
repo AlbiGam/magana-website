@@ -1,7 +1,8 @@
 import './AboutMe.css';
 import { useState } from 'react';
+import { assetUrl } from '../utils/assets';
 
-const ABOUT_PHOTO = '/about_me.jpeg';
+const ABOUT_PHOTO = assetUrl('about_me.jpeg');
 
 const ABOUT_PARAGRAPHS = [
   'My name is Magana Luusa, and I started karting in 2018, aged 8, in Nairobi, Kenya. My family bought a second-hand kart, and from the very beginning, I knew this was what I wanted to do with my life.',

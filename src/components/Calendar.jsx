@@ -1,4 +1,5 @@
 import './Calendar.css';
+import { assetUrl } from '../utils/assets';
 
 const RACE_EVENTS = [
   {
@@ -52,7 +53,7 @@ export default function Calendar() {
 
           <aside className="calendar-right" aria-label="Calendar cover image">
             <div className="calendar-hero">
-              <img src="/calendar.jpeg" alt="Magana Luusa race calendar" />
+              <img src={assetUrl('calendar.jpeg')} alt="Magana Luusa race calendar" />
               <span>2026 SEASON</span>
             </div>
           </aside>

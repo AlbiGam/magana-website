@@ -1,10 +1,11 @@
 import './Partners.css';
+import { assetUrl } from '../utils/assets';
 
 const PARTNERS = [
   {
     name: 'Vivo Energy Kenya',
     type: 'Official Sponsor',
-    logo: '/vivo_energy.png',
+    logo: assetUrl('vivo_energy.png'),
     description:
       'Established in November 2012 after acquiring Shell\'s downstream business in Kenya, Vivo Energy Kenya is a market leader serving retail and commercial customers with automotive fuels, lubricants, aviation fuels, LPG, and black fuels.',
     highlights: [
@@ -17,7 +18,7 @@ const PARTNERS = [
   {
     name: 'AIMotor',
     type: 'Technical Partner',
-    logo: '/aimotor.png',
+    logo: assetUrl('aimotor.png'),
     description:
       'AIMotor supports Magana Luusa as technical partner, bringing a technology-first identity to the racing programme and strengthening the project with focused technical backing.',
     highlights: [
@@ -49,7 +50,7 @@ export default function Partners() {
           </div>
 
           <div className="partners-visual">
-            <img src="/partners.jpeg" alt="Magana Luusa with partner section feature image" />
+            <img src={assetUrl('partners.jpeg')} alt="Magana Luusa with partner section feature image" />
           </div>
         </div>
 

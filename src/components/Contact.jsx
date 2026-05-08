@@ -1,4 +1,5 @@
 import './Contact.css';
+import { assetUrl } from '../utils/assets';
 
 export default function Contact() {
   return (
@@ -29,7 +30,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-visual">
-            <img src="/contact.jpeg" alt="Magana Luusa racing at dusk" />
+            <img src={assetUrl('contact.jpeg')} alt="Magana Luusa racing at dusk" />
           </div>
         </div>
       </div>

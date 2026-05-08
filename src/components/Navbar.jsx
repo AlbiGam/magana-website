@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Navbar.css';
+import { assetUrl } from '../utils/assets';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="navbar-logo">
           <div className="logo-icon">
-            <img src="/LOGO.png" alt="Magana Luusa logo" className="logo-image" />
+            <img src={assetUrl('LOGO.png')} alt="Magana Luusa logo" className="logo-image" />
           </div>
           <span className="logo-text">MAGANA LUUSA</span>
         </div>

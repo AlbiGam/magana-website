@@ -1,6 +1,7 @@
 import './Hero.css';
+import { assetUrl } from '../utils/assets';
 
-const KARTING_PHOTO = '/main_picture.jpeg';
+const KARTING_PHOTO = assetUrl('main_picture.jpeg');
 
 export default function Hero() {
   return (
