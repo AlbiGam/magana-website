@@ -1,0 +1,171 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ── Left photo ── */
+.hero-photo {
+  position: relative;
+  width: 52%;
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Horizontal fade from photo into background */
+.hero-photo-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 50%,
+    #ffffff 100%
+  );
+}
+
+/* ── Right text ── */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px 0 60px;
+  gap: 20px;
+}
+
+/* Label row */
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.label-line {
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: #1565C0;
+  flex-shrink: 0;
+}
+
+.label-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #555;
+}
+
+/* Name */
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  margin: 0;
+  gap: 4px;
+}
+
+.title-first,
+.title-last {
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-first {
+  color: #0d1b2a;
+}
+
+.title-last {
+  color: #1565C0;
+}
+
+/* Subtitle */
+.hero-sub {
+  font-size: 15px;
+  color: #666;
+  margin: 8px 0 0;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 32px;
+  border: 1.5px solid #aaa;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #333;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.hero-btn:hover {
+  background: #1565C0;
+  color: #fff;
+  border-color: #1565C0;
+}
+
+/* ── Side dots ── */
+.side-dots {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: #1565C0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .hero-photo-fade {
+    background: linear-gradient(to bottom, transparent 60%, #ffffff 100%);
+  }
+
+  .hero-content {
+    padding: 32px 24px 60px;
+  }
+
+  .side-dots {
+    display: none;
+  }
+}

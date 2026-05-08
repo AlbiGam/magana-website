@@ -1,0 +1,145 @@
+.calendar-section {
+  padding: 40px 0 110px;
+  background: #ffffff;
+}
+
+.calendar-shell {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.calendar-left {
+  min-width: 0;
+}
+
+.calendar-header {
+  margin-bottom: 24px;
+}
+
+.calendar-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  color: #0d1b2a;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.calendar-card {
+  border: 1px solid #dfe9f5;
+  background: #fbfdff;
+  padding: 20px 16px 18px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-date {
+  color: #1565c0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.calendar-card h3 {
+  margin: 0;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: 34px;
+  line-height: 0.95;
+  color: #0d1b2a;
+}
+
+.event-location {
+  margin-top: auto;
+  color: #63758a;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calendar-right {
+  position: sticky;
+  top: 24px;
+}
+
+.calendar-hero {
+  position: relative;
+  border: 1px solid #dfe9f5;
+  overflow: hidden;
+}
+
+.calendar-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.calendar-hero span {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(13, 27, 42, 0.9);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 8px 12px;
+}
+
+@media (max-width: 1180px) {
+  .calendar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-right {
+    position: static;
+    order: -1;
+  }
+
+  .calendar-hero img {
+    height: auto;
+    object-fit: unset;
+  }
+}
+
+@media (max-width: 680px) {
+  .calendar-shell {
+    width: calc(100% - 32px);
+  }
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-hero img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .calendar-card h3 {
+    font-size: 30px;
+  }
+}
