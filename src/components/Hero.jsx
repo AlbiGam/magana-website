@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-label">
           <span className="label-line" />
-          <span className="label-text">PROFESSIONAL KARTING DRIVER</span>
+          <span className="label-text">PROFESSIONAL RACING DRIVER</span>
         </div>
 
         <h1 className="hero-title">
