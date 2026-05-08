@@ -42,15 +42,6 @@ export default function Navbar() {
             <li><a href="#calendar" className="nav-link">CALENDAR</a></li>
             <li><a href="#contact" className="nav-link">CONTACT</a></li>
           </ul>
-
-          <div className="navbar-lang">
-            <button className="lang-btn">
-              EN
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
         </div>
 
         <button
@@ -94,15 +85,6 @@ export default function Navbar() {
                 <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
               </svg>
             </a>
-          </div>
-
-          <div className="navbar-lang navbar-sidebar-lang">
-            <button className="lang-btn">
-              EN
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
           </div>
         </div>
       </aside>
